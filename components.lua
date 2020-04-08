@@ -386,7 +386,7 @@ they are searched for in player's inventories
 
 ]]
 
-if ( minetest.get_modpath("default") or minetest.get_modpath("mcl_core") ) and minetest.get_modpath("bucket") and  thirsty.config.register_amulets then
+if (minetest.get_modpath("default") and minetest.get_modpath("bucket")) or (minetest.get_modpath("mcl_core") and  minetest.get_modpath("mcl_buckets")) and  thirsty.config.register_amulets then
 
     minetest.register_craftitem('thirsty:injector', {
         description = 'Water injector',

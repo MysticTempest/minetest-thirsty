@@ -284,10 +284,10 @@ function thirsty.drink_handler(player, itemstack, node)
             itemstack:set_wear(1) -- "looks full"
 
         -- change mcl or thirsty bowl to full version, but only if we not thirsty already.
-        elseif core.get_modpath("mcl_core") and mcl_core and thirsty.config.register_bowl and item_name == "mcl_core:bowl" and hydro <= 20 then
+        elseif core.get_modpath("mcl_core") and mcl_core and thirsty.config.register_bowl and item_name == "mcl_core:bowl" then
                 itemstack:replace("thirsty:mcl_bowl_water")
 
-        elseif core.get_modpath("default") and default and thirsty.config.register_bowl and item_name == "thirsty:wooden_bowl" and hydro <= 20 then
+        elseif core.get_modpath("default") and default and thirsty.config.register_bowl and item_name == "thirsty:wooden_bowl" then
                 itemstack:replace("thirsty:wooden_bowl_water")
         end  
 
