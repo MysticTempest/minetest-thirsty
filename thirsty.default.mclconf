@@ -38,7 +38,7 @@ thirsty.config = {
     -------------------------------------------
 
     -- Thirst per second (full hydration is 20 hydro points)
-    thirst_per_second = 1.0 / 20.0,
+    thirst_per_second = 2.0 / 20.0,
 
     -- Damage per second if completely thirsty / out of hydration
     damage_per_second = 1.0 / 10.0,
@@ -46,7 +46,7 @@ thirsty.config = {
     --[[ How long in seconds you have to remain still to drink
          from standing in water
       ]]
-    stand_still_for_drink = 1.0,
+    stand_still_for_drink = 119.0,
 
     --[[ How long in seconds of not moving before a player is deemed
          AFK (away from keyboard), such players no longer get thirsty
@@ -59,10 +59,10 @@ thirsty.config = {
          Assign 0 to stop a player from drinking from this node type.
       ]]
     regen_from_node = {
-        ['mcl_core:water_source'] = 0.5,
-        ['mcl_core:water_flowing'] = 0.5,
-        ['mclx_core:river_water_source'] = 0.5,
-        ['mclx_core:river_water_flowing'] = 0.5,
+        ['mcl_core:water_source'] = 0,
+        ['mcl_core:water_flowing'] = 0,
+        ['mclx_core:river_water_source'] = 0,
+        ['mclx_core:river_water_flowing'] = 0,
     },
 
     
@@ -71,9 +71,9 @@ thirsty.config = {
           and loosing contents
     ]]
     drink_this = {
-        ['mcl_potions:potion_river_water'] = 25,
-        ['mcl_potions:potion_water'] = 25,
-        ['thirsty:mcl_bowl_water'] = 25,
+        ['mcl_potions:potion_river_water'] = 5,
+        ['mcl_potions:potion_water'] = 5,
+        ['thirsty:mcl_bowl_water'] = 7,
     },
 
     ---------------------------------
@@ -96,9 +96,9 @@ thirsty.config = {
          20 points; these should be more to reward using them.
       ]]
     drink_from_container = {
-        ['mcl_core:bowl'] = 25,
-        ['thirsty:steel_canteen'] = 25,
-        ['thirsty:bronze_canteen'] = 25,
+        ['mcl_core:bowl'] = 7,
+        ['thirsty:steel_canteen'] = 2,
+        ['thirsty:bronze_canteen'] = 2,
     },
 
     ----------------------
@@ -123,7 +123,7 @@ thirsty.config = {
          will you get?
       ]]
     drink_from_node = {
-        ['thirsty:drinking_fountain'] = 30,
+        ['thirsty:drinking_fountain'] = 10,
     },
 
     -------------------------------------
@@ -148,18 +148,18 @@ thirsty.config = {
     --[[ Regeneration from being within a fountain's radius; see also
          regen_from_node (it's as if you're standing in water)
       ]]
-    regen_from_fountain = 0.5,
+    regen_from_fountain = 0,
 
     -- How far should the fountain scanning pyramid go?
     fountain_height = 4,
 
     -- The max level of a fountain
-    fountain_max_level = 20,
+    fountain_max_level = 10,
 
     --[[ How many nodes away can you still benefit from a fountain,
          per fountain level
       ]]
-    fountain_distance_per_level = 5,
+    fountain_distance_per_level = 0,
 
     ---------------------
     -- Tier 5: amulets --

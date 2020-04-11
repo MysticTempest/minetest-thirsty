@@ -276,7 +276,7 @@ function thirsty.drink_handler(player, itemstack, node)
         -- drink until level
         local level = math.max(cont_level, node_level)
         --print("Drinking to level " .. level)
-        thirsty.drink(player, level, level)
+        thirsty.drink(player, level, 20)
 
         -- fill container, if applicable
         if thirsty.config.container_capacity[item_name] then
@@ -317,7 +317,7 @@ function thirsty.drink_handler(player, itemstack, node)
         print("drinking.....!")
         
         local drink_level = thirsty.config.drink_this[item_name] or 0
-        thirsty.drink(player, drink_level, drink_level)
+        thirsty.drink(player, drink_level, 20)
         -- replace some of the items with their water-free equivalents
         if item_name == "thirsty:mcl_bowl_water" then
             itemstack:replace("mcl_core:bowl")
